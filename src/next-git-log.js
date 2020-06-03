@@ -8,11 +8,12 @@
     pretty: "%h - %s",
     since: '2020-05-01',
     before: today,
+    suffix: ''
   }
 
   nx.gitLog = function (inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
-    var cmds = tmpl('git log --pretty="{pretty}" --since="{since}" --before="{before}"', options);
+    var cmds = tmpl('git log --pretty="{pretty}" --since="{since}" --before="{before}" {suffix}', options);
 
     return new Promise(function (resolve, reject) {
       exec(cmds, function (error, stdout) {

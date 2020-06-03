@@ -2,8 +2,8 @@
  * name: @alo7i/next-git-log
  * description: Git logs.
  * homepage: https://github.com/afeiship/next-git-log
- * version: 1.0.0
- * date: 2020-06-03T08:52:03.927Z
+ * version: 1.0.1
+ * date: 2020-06-03T09:02:50.266Z
  * license: MIT
  */
 
@@ -17,11 +17,12 @@
     pretty: "%h - %s",
     since: '2020-05-01',
     before: today,
+    suffix: ''
   }
 
   nx.gitLog = function (inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
-    var cmds = tmpl('git log --pretty="{pretty}" --since="{since}" --before="{before}"', options);
+    var cmds = tmpl('git log --pretty="{pretty}" --since="{since}" --before="{before}" {suffix}', options);
 
     return new Promise(function (resolve, reject) {
       exec(cmds, function (error, stdout) {

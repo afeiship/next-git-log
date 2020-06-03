@@ -6,6 +6,14 @@
 npm install -S @alo7i/next-git-log
 ```
 
+## apis
+| api    | type   | default    | description            |
+| ------ | ------ | ---------- | ---------------------- |
+| pretty | string | %h - %s    | git log `pretty`       |
+| since  | string | 2020-05-01 | git log `since`        |
+| before | string | TODAY      | git log `before`       |
+| suffix | string | ''         | git log - ... `suffix` |
+
 ## usage
 ```js
 import '@alo7i/next-git-log';

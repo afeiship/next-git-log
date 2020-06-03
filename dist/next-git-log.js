@@ -1,3 +1,12 @@
+/*!
+ * name: @alo7i/next-git-log
+ * description: Git logs.
+ * homepage: https://github.com/afeiship/next-git-log
+ * version: 1.0.0
+ * date: 2020-06-03T08:52:03.927Z
+ * license: MIT
+ */
+
 (function () {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
@@ -29,3 +38,5 @@
     module.exports = nx.gitLog;
   }
 })();
+
+//# sourceMappingURL=next-git-log.js.map

@@ -10,5 +10,7 @@ npm install -S @alo7i/next-git-log
 ```js
 import '@alo7i/next-git-log';
 
-//DOCS here!
+nx.gitLog({ since: '2020-06-01' }).then(res => {
+  console.log(res);
+});
 ```

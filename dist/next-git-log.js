@@ -2,8 +2,8 @@
  * name: @feizheng/next-git-log
  * description: Git logs.
  * homepage: https://github.com/afeiship/next-git-log
- * version: 1.0.1
- * date: 2020-06-13T01:52:20.925Z
+ * version: 1.0.0
+ * date: 2020-06-13T01:54:55.698Z
  * license: MIT
  */
 

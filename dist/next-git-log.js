@@ -2,8 +2,8 @@
  * name: @feizheng/next-git-log
  * description: Git logs.
  * homepage: https://github.com/afeiship/next-git-log
- * version: 1.0.0
- * date: 2020-06-13T01:54:55.698Z
+ * version: 1.0.1
+ * date: 2020-06-13T12:57:33.428Z
  * license: MIT
  */
 
@@ -26,10 +26,7 @@
 
     return new Promise(function (resolve, reject) {
       exec(cmds, function (error, stdout) {
-        if (error) {
-          reject(error);
-          return;
-        }
+        if (error) return reject(error)
         resolve(stdout.trim());
       });
     })

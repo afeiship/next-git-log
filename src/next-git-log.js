@@ -17,10 +17,7 @@
 
     return new Promise(function (resolve, reject) {
       exec(cmds, function (error, stdout) {
-        if (error) {
-          reject(error);
-          return;
-        }
+        if (error) return reject(error)
         resolve(stdout.trim());
       });
     })

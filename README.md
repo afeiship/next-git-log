@@ -3,7 +3,7 @@
 
 ## installation
 ```bash
-npm install -S @alo7i/next-git-log
+npm install -S @feizheng/next-git-log
 ```
 
 ## apis
@@ -16,7 +16,7 @@ npm install -S @alo7i/next-git-log
 
 ## usage
 ```js
-import '@alo7i/next-git-log';
+import '@feizheng/next-git-log';
 
 nx.gitLog({ since: '2020-06-01' }).then(res => {
   console.log(res);

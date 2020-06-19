@@ -7,12 +7,13 @@ npm install -S @feizheng/next-git-log
 ```
 
 ## apis
-| api    | type   | default    | description            |
-| ------ | ------ | ---------- | ---------------------- |
-| pretty | string | %h - %s    | git log `pretty`       |
-| since  | string | 2020-05-01 | git log `since`        |
-| before | string | TODAY      | git log `before`       |
-| suffix | string | ''         | git log - ... `suffix` |
+| api    | type    | default    | description              |
+| ------ | ------- | ---------- | ------------------------ |
+| pretty | string  | %h - %s    | git log `pretty`         |
+| since  | string  | 2020-05-01 | git log `since`          |
+| before | string  | TODAY      | git log `before`         |
+| suffix | string  | ''         | git log - ... `suffix`   |
+| debug  | boolean | false      | Output the shell scripts |
 
 ## usage
 ```js

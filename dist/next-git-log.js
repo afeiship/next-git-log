@@ -2,8 +2,8 @@
  * name: @feizheng/next-git-log
  * description: Git logs.
  * homepage: https://github.com/afeiship/next-git-log
- * version: 1.0.1
- * date: 2020-06-13T12:57:33.428Z
+ * version: 1.1.0
+ * date: 2020-06-19T08:14:29.458Z
  * license: MIT
  */
 
@@ -17,12 +17,23 @@
     pretty: "%h - %s",
     since: '2020-05-01',
     before: today,
-    suffix: ''
+    suffix: '',
+    debug: false
   }
 
   nx.gitLog = function (inOptions) {
     var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
-    var cmds = tmpl('git log --pretty="{pretty}" --since="{since}" --before="{before}" {suffix}', options);
+    var templates = [
+      'git log',
+      options.pretty && '--pretty="{pretty}"',
+      options.since && '--since="{since}"',
+      options.before && '--before="{before}"',
+      options.suffix && '{suffix}',
+    ].filter(Boolean).join(' ');
+
+    var cmds = tmpl(templates, options);
+
+    options.debug && console.log('[ debug ]: ', cmds);
 
     return new Promise(function (resolve, reject) {
       exec(cmds, function (error, stdout) {

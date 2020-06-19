@@ -14,5 +14,13 @@ describe('api.basic test', () => {
       expect(res.split('\n').length > 1).toBe(true);
       done();
     });
+  });
+
+  test('git log since set null will no since options', (done) => {
+    nx.gitLog({ debug: true, before: null }).then(res => {
+      expect(res.split('\n').length > 8).toBe(true);
+      done();
+    });
   })
+
 });

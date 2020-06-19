@@ -21,6 +21,11 @@ describe('api.basic test', () => {
       expect(res.split('\n').length > 8).toBe(true);
       done();
     });
+  });
+
+  test('git async = false', () => {
+    const res = nx.gitLog({ async: false, before: null });
+    expect(res.split('\n').length > 8).toBe(true);
   })
 
 });

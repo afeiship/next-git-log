@@ -3,7 +3,7 @@
  * description: Git logs.
  * homepage: https://github.com/afeiship/next-git-log
  * version: 1.0.0
- * date: 2020-11-21 09:31:04
+ * date: 2020-11-21 09:35:51
  * license: MIT
  */
 

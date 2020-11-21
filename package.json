@@ -39,5 +39,10 @@
   },
   "dependencies": {
     "@jswork/next-tmpl": "^1.0.0"
-  }
+  },
+  "keywords": [
+    "next",
+    "git",
+    "log"
+  ]
 }
